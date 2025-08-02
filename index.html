@@ -8,33 +8,35 @@
 </head>
 <body>
 
+  <!-- زر تغيير الوضع في الركن -->
+  <button id="theme-toggle" title="Toggle Theme">🌙</button>
+
   <header class="hero">
-    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic"/>
+    <img src="D:\files\phone\Pictures\My pictures\٢٠٢٤٠٣٢١_٠٣٢٦٣٢"/>
     <h1>Ahmed Esmail</h1>
-    <p>Junior Developer | Java & Desktop Apps</p>
-    <button id="theme-toggle">Toggle Theme</button>
+    <p>CS Student | Java Developer </p>
   </header>
 
   <section class="about">
     <h2>About Me</h2>
-    <p>I'm a passionate developer with experience in building desktop applications using Java (Swing & JavaFX), and always learning new technologies.</p>
+    <p>I’m a Computer Science student at Modern Academy with solid experience in Java programming and a good grasp of SQL. I'm currently pursuing Android development training (DEPI), where I’m enhancing my mobile development skills.
+With a strong passion for software design and application development, I enjoy building efficient, user-friendly software. I’m always eager to learn, grow,</p>
   </section>
 
   <section class="skills">
     <h2>Skills</h2>
     <ul>
-      <li>Java (Swing / JavaFX)</li>
+      <li>Java</li>
       <li>SQL & Databases</li>
-      <li>HTML / CSS / Git</li>
-      <li>Problem Solving (HackerRank)</li>
+      <li>Problem Solving</li>
     </ul>
   </section>
 
   <section class="experience">
     <h2>Training & Experience</h2>
     <ul>
-      <li>Training at XYZ Company - Java SE Projects</li>
-      <li>Built multiple desktop systems (POS, Library, etc.)</li>
+      <li>Android mobile app development trainee at DEPI</li>
+      <li>Built desktop Apps</li>
     </ul>
   </section>
 
@@ -43,16 +45,14 @@
     <ul>
       <li>Restaurant Management System (JavaFX)</li>
       <li>Library System (Swing)</li>
-      <li>Password Generator (Java)</li>
-      <li>Calculator (JavaFX)</li>
     </ul>
   </section>
 
   <section class="contact">
     <h2>Contact</h2>
     <p>Email: ahmedmme.26@gmail.com</p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/ahmed</a></p>
-    <p>GitHub: <a href="#">github.com/ahmed</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/ahmedmmesmail</a></p>
+    <p>GitHub: <a href="#">github.com/ahmedmmesmail</a></p>
   </section>
 
   <footer>
@@ -60,10 +60,17 @@
   </footer>
 
   <script>
-    const btn = document.getElementById('theme-toggle');
-    btn.onclick = () => {
-      const html = document.documentElement;
-      html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+    const toggleBtn = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    toggleBtn.onclick = () => {
+      if (html.dataset.theme === 'dark') {
+        html.dataset.theme = 'light';
+        toggleBtn.textContent = '☀';
+      } else {
+        html.dataset.theme = 'dark';
+        toggleBtn.textContent = '🌙';
+      }
     }
   </script>
 
