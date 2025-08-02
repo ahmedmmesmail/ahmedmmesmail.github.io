@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ahmed Esmail - Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header class="hero">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic"/>
+    <h1>Ahmed Esmail</h1>
+    <p>Junior Developer | Java & Desktop Apps</p>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I'm a passionate developer with experience in building desktop applications using Java (Swing & JavaFX), and always learning new technologies.</p>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Java (Swing / JavaFX)</li>
+      <li>SQL & Databases</li>
+      <li>HTML / CSS / Git</li>
+      <li>Problem Solving (HackerRank)</li>
+    </ul>
+  </section>
+
+  <section class="experience">
+    <h2>Training & Experience</h2>
+    <ul>
+      <li>Training at XYZ Company - Java SE Projects</li>
+      <li>Built multiple desktop systems (POS, Library, etc.)</li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Restaurant Management System (JavaFX)</li>
+      <li>Library System (Swing)</li>
+      <li>Password Generator (Java)</li>
+      <li>Calculator (JavaFX)</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: ahmedmme.26@gmail.com</p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/ahmed</a></p>
+    <p>GitHub: <a href="#">github.com/ahmed</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Ahmed Esmail</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    btn.onclick = () => {
+      const html = document.documentElement;
+      html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+    }
+  </script>
+
+</body>
+</html>
