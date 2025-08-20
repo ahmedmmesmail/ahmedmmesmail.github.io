@@ -1,78 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ahmed Esmail - Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed | Android Developer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Ahmed Esmail</h1>
+        <p>Android Developer</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <!-- زر تغيير الوضع في الركن -->
-  <button id="theme-toggle" title="Toggle Theme">🌙</button>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I develop modern and user-friendly Android applications using Kotlin and Android Studio.
+        With solid experience in SQL and UI/UX design principles, I build scalable apps with local data storage and optimized performance.
+        I write clean code, use Git for version control, and always aim to deliver value to clients.</p>
+    </section>
 
-  <header class="hero">
-    <img src="D:\files\phone\Pictures\My pictures\٢٠٢٤٠٣٢١_٠٣٢٦٣٢"/>
-    <h1>Ahmed Esmail</h1>
-    <p>CS Student | Java Developer </p>
-  </header>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Kotlin</li>
+            <li>Java</li>
+            <li>SQL</li>
+            <li>Android Studio</li>
+            <li>Git & GitHub</li>
+            <li>XML Layout Design</li>
+            <li>UI/UX Principles</li>
+        </ul>
+    </section>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I’m a Computer Science student at Modern Academy with solid experience in Java programming and a good grasp of SQL. I'm currently pursuing Android development training (DEPI), where I’m enhancing my mobile development skills.
-With a strong passion for software design and application development, I enjoy building efficient, user-friendly software. I’m always eager to learn, grow,</p>
-  </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Library Management System</h3>
+            <p>Desktop application built with Java Swing and SQL, allowing users to search and request books, and admins to manage the system.</p>
+        </div>
+        <div class="project">
+            <h3>Modern Android App</h3>
+            <p>Android app developed using Kotlin during the DEPI training. Features include local storage, performance optimization, and a clean UI.</p>
+        </div>
+        <div class="project">
+            <h3>Power BI Dashboard</h3>
+            <p>Built a detailed interactive dashboard after completing a training course with MCIT. Visualized key metrics and insights for decision-making.</p>
+        </div>
+    </section>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Java</li>
-      <li>SQL & Databases</li>
-      <li>Problem Solving</li>
-    </ul>
-  </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: ahmed@example.com</p>
+        <p>GitHub: <a href="https://github.com/ahmedmmesmail" target="_blank">github.com/ahmed</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/ahmedmmesmail" target="_blank">linkedin.com/in/ahmed</a></p>
+    </section>
 
-  <section class="experience">
-    <h2>Training & Experience</h2>
-    <ul>
-      <li>Android mobile app development trainee at DEPI</li>
-      <li>Built desktop Apps</li>
-    </ul>
-  </section>
-
-  <section class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Restaurant Management System (JavaFX)</li>
-      <li>Library System (Swing)</li>
-    </ul>
-  </section>
-
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: ahmedmme.26@gmail.com</p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/ahmedmmesmail</a></p>
-    <p>GitHub: <a href="#">github.com/ahmedmmesmail</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Ahmed Esmail</p>
-  </footer>
-
-  <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-
-    toggleBtn.onclick = () => {
-      if (html.dataset.theme === 'dark') {
-        html.dataset.theme = 'light';
-        toggleBtn.textContent = '☀';
-      } else {
-        html.dataset.theme = 'dark';
-        toggleBtn.textContent = '🌙';
-      }
-    }
-  </script>
-
+    <footer>
+        <p>© 2025 Ahmed Esmail</p>
+    </footer>
 </body>
 </html>
