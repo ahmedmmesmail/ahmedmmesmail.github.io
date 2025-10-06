@@ -1,57 +1,27 @@
-/* Light mode skill boxes */
-.skill-box {
-  background-color: white;
-  transition: 0.3s ease;
-  cursor: default;
-  user-select: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+// Dark mode toggle + save state in localStorage
+const toggleBtn = document.getElementById('darkModeToggle');
+
+function enableDarkMode() {
+  document.body.classList.add('dark-mode');
+  toggleBtn.innerHTML = '<i class="bi bi-sun-fill me-1"></i> Light Mode';
+  localStorage.setItem('theme', 'dark');
 }
 
-.skill-box:hover {
-  background-color: #d0f0d0;
-  transform: scale(1.05);
-  transition: 0.3s ease;
+function disableDarkMode() {
+  document.body.classList.remove('dark-mode');
+  toggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill me-1"></i> Dark Mode';
+  localStorage.setItem('theme', 'light');
 }
 
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
+toggleBtn.addEventListener('click', () => {
+  if (document.body.classList.contains('dark-mode')) {
+    disableDarkMode();
+  } else {
+    enableDarkMode();
+  }
+});
 
-body.dark-mode .navbar,
-body.dark-mode footer {
-  background-color: #1e1e1e !important;
-}
-
-body.dark-mode .bg-light {
-  background-color: #1e1e1e !important;
-  color: #ddd;
-}
-
-body.dark-mode .card {
-  background-color: #2a2a2a;
-  color: #fff;
-}
-
-body.dark-mode .skill-box {
-  background-color: #333;
-  color: #fff;
-}
-
-body.dark-mode .skill-box:hover {
-  background-color: #444;
-  transform: scale(1.05);
-}
-
-/* Button animation */
-.btn-animate {
-  transition: all 0.3s ease;
-}
-
-.btn-animate:hover {
-  background-color: #1b5e20 !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
+window.onload = () => {
+  if (localStorage.getItem('theme') === 'dark') enableDarkMode();
+  else disableDarkMode();
+};
